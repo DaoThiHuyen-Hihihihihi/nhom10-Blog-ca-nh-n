@@ -16,7 +16,7 @@ body {
   border-radius: 70%;
 }
 :root {
-  --white: white
+  --white: white;
   --gray: #474645;
   --black: #171100;
   --header-color: #f1f0ec;

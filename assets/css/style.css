@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+/* 1rem=16px */
+html {
+  font-size: 62.5%;
+}
+
+/* khoi phuc co chu */
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;}
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 70%;
+}
+:root {
+  --white: white
+  --gray: #474645;
+  --black: #171100;
+  --header-color: #f1f0ec;
+  --font-heading: "Roboto", sans-serif;
+}
+
+/* ==========common============ */
+
+h2.heading-lv2 {
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76;
+ 
+}
+/* gach chan */
+a {
+  text-decoration: None;
+}
+/*mac dinh the a la display: inline se khong chinh duoc padding, nen doi thanh inline-block*/
+
+.header {
+  z-index: 100;
+}
+
+/* header */
+.header {
+  background: var(--header-color);
+}
+/* giu cho header luon dung yen */
+.header.fixed {
+  position: sticky;
+  /* khi le tren luot di khoang 28px thi bi du lai */
+  top: -28px;
+}
+.header .body {
+  display: flex;
+  /* can lai ca hang chu cung 1 dong voi chu sign up */
+  /* align-items: baseline; */
+  align-items: center;
+  /* ten 36 trai/phai=0 duoi=8 */
+  padding: 36px 0 8px;
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+.main-content {
+  width: 1200px;
+  /* keos ra thu nho khong hien thanh cuon va bi sat le 24px la do rong moi ben, tong 2 ben la 48px*/
+  /* calc la ham cho phep thuc hien phep tinh  */
+  max-width: calc(100% - 48px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav a {
+  position: relative;
+  color: #474645;
+
+  font-size: 1.6rem;
+
+  /* moi chu home or courses or pricing cach nhau 42px thi moi cai padding la 2.1rem, va dung padding thi khi nhap chuot vao se hien hinh ban tay voi khum hon, de hieu ro thay padding bang margin: 8px 2.1rem xem */
+  padding: 2.1rem;
+}
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  /* text-shadow: ngang dung do_nhoe mausac */
+  text-shadow: 1px 0 0 currentColor;
+}
+/* box co croll bai 65 voi overflow:scroll or auto*/
+
+/* lam cho duoi chan chu Home co dau gach chi minh chu H */
+.nav li.active a::after {
+  /* khi de postion: absolute thi vi tri cua dau gach se co the can theo the a co position la relative */
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 2px;
+  /* vi luc dau minh dang them o the home padding la 21px */
+  left: 21px;
+  bottom: 6px;
+  border-radius: 1px;
+  background-color: #171100;
+  /* vi phan tu gia khong ap dung voi display la inline nen phai chinh lai display: block or inline-block */
+  display: block;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+  margin-left: 30px;
+}
+
+/* ========hero ==========*/
+
+/* hero */
+.hero {
+  /* margin-top: 56px nhung margin khong do duoc mau ma minh muon mau cua hero va mau cua header dong nhat thi phai dung padding moi do duoc mau */
+  padding-top: 56px;
+  background-color: white;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* KHOI BEN TRAI */
+.hero .media-block {
+  position: relative;
+  z-index: 10;
+  width: 48%;
+}
+
+/* chinh anh */
+.hero .media-block .hero-img {
+  width: 470px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-summery {
+  /* noi dung ben trong hero-summery cach 4 phia deu la 24 */
+
+  padding: 24px;
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background-color: #eeee;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.hero-summery .item {
+  display: flex;
+  /* de icon nam giua 2 doan p */
+  align-items: center;
+}
+/* dau + la de chi rang chi ap dung cho 1 item nam sau 1 item khac */
+.hero-summery .item + .item {
+  margin-top: 2.2rem;
+}
+.hero-summery .icon {
+  width: 48px;
+  height: 48px;
+  /* icon duoc bao boi 1 hinh tron ben ngoai */
+  border-radius: 50%;
+  display: flex;
+  background-color: var(--header-color);
+  /* can giua icon vao giua border tron */
+  justify-content: center;
+  align-items: center;
+}
+.hero-summery .info {
+  margin-left: 16px;
+}
+.hero-summery .label {
+  color: var(--gray);
+  font-size: 1.4rem;
+  line-height: 1.86; /*186%*/
+}
+
+/* ========KHOI BEN PHAI ============*/
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .heading {
+  font-family: var(--font-heading);
+  color: var(--black);
+  font-size: 5.8rem;
+  font-weight: 1.17;
+  letter-spacing: -1.16px;
+}
+.desc {
+  color: var(--gray);
+  font-size: 1.8rem;
+  line-height: 1.67;
+  text-align: justify;
+  margin-top: 30px;
+}
+/*===== popular ===============*/
+
+/* ===hoc van=== */
+
+.popular .desc_ttcn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* canh trái */
+  margin-left: 50%; /* dịch block ra giữa */
+  transform: translateX(-50%); /* căn giữa chính xác */
+  gap: 15px;
+}
+
+.popular .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.desc_ttcn .icon {
+  width: 48px;
+  height: 48px;
+  /* icon duoc bao boi 1 hinh tron ben ngoai */
+  border-radius: 50%;
+  display: flex;
+  background-color: var(--header-color);
+  /* can giua icon vao giua border tron */
+  justify-content: center;
+  align-items: center;
+}
+.desc_ttcn .info {
+  margin-left: 16px;
+}
+.desc_ttcn .label {
+  color: var(--black);
+  font-size: 1.8rem;
+  line-height: 1.86; /*186%*/
+}
+
+.desc_ttcn .item + .item {
+  margin-top: 1rem;
+}
+
+.popular {
+  display: flex;
+  flex-direction: column; /* xếp chữ trên, ảnh dưới */
+  align-items: center; /* căn giữa ngang */
+  justify-content: center; /* căn giữa dọc nếu container có chiều cao */
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 165px;
+}
+.popular .img_hocvan img {
+  max-width: 320px; /* ảnh co gọn lại cho đều */
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 100px;
+}
+.bold {
+  font-weight: bold;
+}
+
+/* ==so thich== */
+.popular .sothich-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+.popular .sothich_item {
+  border-radius: 12px;
+  background: var(--white);
+  padding: 16px 22px 22px;
+}
+.popular .sothich_item .img_sothich {
+  border-radius: 12px 12px 0px 0px;
+  width: 100%;
+  height: 278px;
+  object-fit: cover;
+}

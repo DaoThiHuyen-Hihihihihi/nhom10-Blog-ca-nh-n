@@ -10,11 +10,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;}
-.logo {
-  width: 100px;
-  height: auto;
-  border-radius: 70%;
-}
+
 :root {
   --white: white
   --gray: #474645;
@@ -34,6 +30,12 @@ h2.heading-lv2 {
   letter-spacing: -0.76;
  
 }
+h3{
+    font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76;
+}
 /* gach chan */
 a {
   text-decoration: None;
@@ -45,9 +47,8 @@ a {
 }
 
 /* header */
-.header {
-  background: var(--header-color);
-}
+
+
 /* giu cho header luon dung yen */
 .header.fixed {
   position: sticky;
@@ -62,65 +63,61 @@ a {
   /* ten 36 trai/phai=0 duoi=8 */
   padding: 36px 0 8px;
 }
-.nav {
-  margin-left: auto;
-}
-.nav ul {
-  display: flex;
-}
+
 .main-content {
   width: 1200px;
-  /* keos ra thu nho khong hien thanh cuon va bi sat le 24px la do rong moi ben, tong 2 ben la 48px*/
-  /* calc la ham cho phep thuc hien phep tinh  */
-  max-width: calc(100% - 48px);
   margin-right: auto;
   margin-left: auto;
 }
-
-.nav a {
-  position: relative;
-  color: #474645;
-
-  font-size: 1.6rem;
-
-  /* moi chu home or courses or pricing cach nhau 42px thi moi cai padding la 2.1rem, va dung padding thi khi nhap chuot vao se hien hinh ban tay voi khum hon, de hieu ro thay padding bang margin: 8px 2.1rem xem */
-  padding: 2.1rem;
-}
-.nav li.active a,
-.nav a:hover {
-  color: #171100;
-  /* text-shadow: ngang dung do_nhoe mausac */
-  text-shadow: 1px 0 0 currentColor;
-}
-/* box co croll bai 65 voi overflow:scroll or auto*/
-
-/* lam cho duoi chan chu Home co dau gach chi minh chu H */
-.nav li.active a::after {
-  /* khi de postion: absolute thi vi tri cua dau gach se co the can theo the a co position la relative */
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 2px;
-  /* vi luc dau minh dang them o the home padding la 21px */
-  left: 21px;
-  bottom: 6px;
-  border-radius: 1px;
-  background-color: #171100;
-  /* vi phan tu gia khong ap dung voi display la inline nen phai chinh lai display: block or inline-block */
-  display: block;
-}
-.header .btn-sign-up {
-  min-width: 144px;
-  margin-left: 30px;
+.logo{
+  height: 4px;
+  width: 4px;
 }
 
-/* ========hero ==========*/
+.navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+          
+        }
+        
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+  
+        
+nav ul li a {
+        display: block;
+        border: 1px solid;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        
+        margin: 0.5em;
+      }
+a:link,
+      a:visited {
+        color: rgb(0, 0, 0);
+      }
+      a:focus,
+      a:hover,
+      a:active {
+        color: rgb(0, 0, 0);
+         font-weight: 600; 
+         border: 3px solid;
+         
+      }
+     
+
+/* ============hero ==============*/
 
 /* hero */
 .hero {
   /* margin-top: 56px nhung margin khong do duoc mau ma minh muon mau cua hero va mau cua header dong nhat thi phai dung padding moi do duoc mau */
-  padding-top: 56px;
-  background-color: white;
+  /* padding-top: 16px; */
+  background-color: var(--white);
 }
 
 .hero .body {
@@ -136,8 +133,8 @@ a {
 
 /* chinh anh */
 .hero .media-block .hero-img {
-  width: 470px;
-  height: 450px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -151,7 +148,7 @@ a {
   bottom: 48px;
   right: 0;
   border-radius: 12px;
-  background-color: #eeee;
+  background-color: #fff8f8ee;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
 }
 .hero-summery .item {
@@ -203,7 +200,16 @@ a {
   text-align: justify;
   margin-top: 30px;
 }
-/*===== popular ===============*/
+/*======== popular ===============*/
+.popular {
+  display: flex;
+  flex-direction: column; /* xếp chữ trên, ảnh dưới */
+  align-items: center; /* căn giữa ngang */
+  justify-content: center; /* căn giữa dọc nếu container có chiều cao */
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 165px;
+}
 
 /* ===hoc van=== */
 
@@ -246,15 +252,7 @@ a {
   margin-top: 1rem;
 }
 
-.popular {
-  display: flex;
-  flex-direction: column; /* xếp chữ trên, ảnh dưới */
-  align-items: center; /* căn giữa ngang */
-  justify-content: center; /* căn giữa dọc nếu container có chiều cao */
-  text-align: center;
-  padding: 40px 0;
-  margin-top: 165px;
-}
+
 .popular .img_hocvan img {
   max-width: 320px; /* ảnh co gọn lại cho đều */
   border-radius: 10px;
@@ -275,8 +273,9 @@ a {
 }
 .popular .sothich_item {
   border-radius: 12px;
-  background: var(--white);
+  background: var(--header-color);
   padding: 16px 22px 22px;
+  box-shadow: 0px 18px 36px 0px black(0,0,0,0.05);
 }
 .popular .sothich_item .img_sothich {
   border-radius: 12px 12px 0px 0px;

@@ -16,10 +16,14 @@
 header {
     background-color:#f1f0ec ;
     height: 150px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     }
 header ul {
     font-size: large;
+}
+a {
+  text-decoration: none;
+  font-weight: 500;
 }
 a:link, a:visited { color:black; }
 a:focus, a:hover, a:active { color: pink; }

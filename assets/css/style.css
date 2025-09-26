@@ -147,6 +147,7 @@ a {
   color: var(--gray);
   font-size: 1.8rem;
   line-height: 1.67;
+  /* can deu 2 ben */
   text-align: justify;
   margin-top: 30px;
 }
@@ -222,9 +223,9 @@ a {
 }
 .popular .sothich_item {
   border-radius: 12px;
-  background: var(--header-color);
+  background: rgb(206, 205, 205);
   padding: 16px 22px 22px;
-  box-shadow: 0px 18px 36px 0px black(0, 0, 0, 0.05);
+  box-shadow: 0px 18px 36px 0px black(0, 0, 0, 0.2);
 }
 .popular .sothich_item .img_sothich {
   border-radius: 12px 12px 0px 0px;

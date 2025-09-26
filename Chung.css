@@ -16,12 +16,13 @@
 header {
     background-color:#f1f0ec ;
     height: 150px;
-}
+    font-family: Roboto, sans-serif;
+    }
 header ul {
     font-size: large;
 }
-a:link, a:visited { color:goldenrod; }
-a:focus, a:hover, a:active { color: blanchedalmond; }
+a:link, a:visited { color:black; }
+a:focus, a:hover, a:active { color: pink; }
 nav ul li a {
     display:block;
     border: 1px solid;
@@ -36,6 +37,7 @@ footer {
     padding: 20px;
     text-align: center;
     margin: 0; 
+    font-family: Roboto, sans-serif;
 }
 .social {
     display: flex;
